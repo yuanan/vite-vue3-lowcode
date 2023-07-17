@@ -1,8 +1,8 @@
 /*
- * @Author: 卜启缘
+ * @Author: xxx
  * @Date: 2021-06-12 21:29:32
  * @LastEditTime: 2021-06-25 08:48:30
- * @LastEditors: 卜启缘
+ * @LastEditors: xxx
  * @Description: 执行组件动画
  * @FilePath: \vite-vue3-lowcode\src\hooks\useAnimate.ts
  */

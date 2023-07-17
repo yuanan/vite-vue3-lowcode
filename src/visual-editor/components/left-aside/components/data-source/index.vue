@@ -1,8 +1,8 @@
 <!--
- * @Author: 卜启缘
+ * @Author: xxx
  * @Date: 2021-06-24 18:36:03
  * @LastEditTime: 2022-07-02 23:13:00
- * @LastEditors: 卜启缘
+ * @LastEditors: xxx
  * @Description: 数据源管理
  * @FilePath: /vite-vue3-lowcode/src/visual-editor/components/left-aside/components/data-source/index.vue
 -->
@@ -30,16 +30,16 @@
 </script>
 
 <style lang="scss" scoped>
-  .data-source :deep {
-    .el-tabs__header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .el-tabs__content {
-      contain: layout;
-      content-visibility: auto;
-    }
+.data-source :deep {
+  .el-tabs__header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
   }
+
+  .el-tabs__content {
+    contain: layout;
+    content-visibility: auto;
+  }
+}
 </style>

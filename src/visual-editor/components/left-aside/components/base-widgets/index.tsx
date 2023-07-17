@@ -1,8 +1,8 @@
 /*
- * @Author: 卜启缘
+ * @Author: xxx
  * @Date: 2021-06-01 13:22:14
  * @LastEditTime: 2021-07-11 11:05:06
- * @LastEditors: 卜启缘
+ * @LastEditors: xxx
  * @Description: 基础组件
  * @FilePath: \vite-vue3-lowcode\src\visual-editor\components\left-aside\components\base-widgets\index.tsx
  */

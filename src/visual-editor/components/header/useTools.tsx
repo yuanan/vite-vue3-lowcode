@@ -1,6 +1,6 @@
 /**
  * @name: tools
- * @author: 卜启缘
+ * @author: xxx
  * @date: 2021/5/7 10:46
  * @description：tools
  * @update: 2021/5/7 10:46
@@ -97,7 +97,7 @@ export const useTools = () => {
       onClick: () => {
         const qrcode = useQRCode(`${location.origin}/preview`);
         useModal({
-          title: '预览二维码（暂不可用）',
+          title: '预览二维码',
           props: {
             width: 300,
           },

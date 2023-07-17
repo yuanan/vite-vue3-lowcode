@@ -1,8 +1,8 @@
 /*
- * @Author: 卜启缘
+ * @Author: xxx
  * @Date: 2021-07-06 22:14:13
  * @LastEditTime: 2021-07-07 16:32:50
- * @LastEditors: 卜启缘
+ * @LastEditors: xxx
  * @Description:
  * @FilePath: \vite-vue3-lowcode\src\visual-editor\components\common\format-input-number\index.tsx
  */

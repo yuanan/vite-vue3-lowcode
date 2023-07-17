@@ -1,8 +1,8 @@
 /*
- * @Author: 卜启缘
+ * @Author: xxx
  * @Date: 2021-06-01 09:45:21
  * @LastEditTime: 2021-07-13 17:15:05
- * @LastEditors: 卜启缘
+ * @LastEditors: xxx
  * @Description: 表单项类型 - 评分
  * @FilePath: \vite-vue3-lowcode\src\packages\base-widgets\rate\index.tsx
  */

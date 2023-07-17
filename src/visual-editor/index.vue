@@ -1,8 +1,8 @@
 <!--
- * @Author: 卜启缘
+ * @Author: xxx
  * @Date: 2021-06-24 00:35:17
  * @LastEditTime: 2021-06-27 14:31:28
- * @LastEditors: 卜启缘
+ * @LastEditors: xxx
  * @Description: 可视化编辑器
  * @FilePath: \vite-vue3-lowcode\src\visual-editor\index.vue
 -->
@@ -40,27 +40,28 @@
 </script>
 
 <style lang="scss">
-  .el-header,
-  .el-footer {
-    position: relative;
-    z-index: 99;
-    background-color: white;
-  }
+.el-header,
+.el-footer {
+  position: relative;
+  z-index: 99;
+  background-color: white;
+}
 
-  .el-aside {
-    background-color: white;
-  }
+.el-aside {
+  background-color: white;
+}
 
-  .layout-container {
-    height: calc(100vh - 80px);
-  }
+.layout-container {
+  height: calc(100vh - 80px);
+}
 
-  .el-main {
-    position: relative;
-    padding: 12px;
-    background-color: #f5f5f5;
-    @media (min-width: 1111px) {
-      overflow-x: hidden;
-    }
+.el-main {
+  position: relative;
+  padding: 12px;
+  background-color: #f5f5f5;
+
+  @media (min-width: 1111px) {
+    overflow-x: hidden;
   }
+}
 </style>

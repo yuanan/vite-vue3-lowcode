@@ -1,37 +1,18 @@
 <template>
-  <draggable-transition-group
-    v-model="slotChildren"
-    v-model:drag="isDrag"
-    class="inner-draggable"
-    :class="{ slot: !slotChildren?.length }"
-    draggable=".item-drag"
-    :data-slot="`插槽（${slotKey}）\n 拖拽组件到此处`"
-  >
+  <draggable-transition-group v-model="slotChildren" v-model:drag="isDrag" class="inner-draggable"
+    :class="{ slot: !slotChildren?.length }" draggable=".item-drag" :data-slot="`插槽（${slotKey}）\n 拖拽组件到此处`">
     <template #item="{ element: innerElement }">
-      <div
-        class="list-group-item inner"
-        :data-label="innerElement.label"
-        :class="{
-          focus: innerElement.focus,
-          focusWithChild: innerElement.focusWithChild,
-        }"
-        @contextmenu.stop.prevent="onContextmenuBlock($event, innerElement, slotChildren)"
-        @mousedown.stop="selectComp(innerElement)"
-      >
-        <comp-render
-          :element="innerElement"
-          :style="{
-            pointerEvents: Object.keys(innerElement.props?.slots || {}).length ? 'auto' : 'none',
-          }"
-        >
+      <div class="list-group-item inner" :data-label="innerElement.label" :class="{
+        focus: innerElement.focus,
+        focusWithChild: innerElement.focusWithChild,
+      }" @contextmenu.stop.prevent="onContextmenuBlock($event, innerElement, slotChildren)"
+        @mousedown.stop="selectComp(innerElement)">
+        <comp-render :element="innerElement" :style="{
+          pointerEvents: Object.keys(innerElement.props?.slots || {}).length ? 'auto' : 'none',
+        }">
           <template v-for="(value, key) in innerElement.props?.slots" :key="key" #[key]>
-            <SlotItem
-              v-model:children="value.children"
-              v-model:drag="isDrag"
-              :slot-key="key"
-              :on-contextmenu-block="onContextmenuBlock"
-              :select-comp="selectComp"
-            />
+            <SlotItem v-model:children="value.children" v-model:drag="isDrag" :slot-key="key"
+              :on-contextmenu-block="onContextmenuBlock" :select-comp="selectComp" />
           </template>
         </comp-render>
       </div>
@@ -42,7 +23,7 @@
 <script lang="ts" setup>
   /**
    * @name: slot-item
-   * @author:卜启缘
+   * @author:xxx
    * @date: 2021/5/2 22:36
    * @description：slot-item
    * @update: 2021/5/2 22:36
@@ -96,54 +77,54 @@
 </script>
 
 <style lang="scss" scoped>
-  @import './func.scss';
+@import './func.scss';
 
-  .inner-draggable {
-    position: relative;
+.inner-draggable {
+  position: relative;
+}
+
+.inner-draggable.slot::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  height: auto;
+  min-height: 40px;
+  font-size: 12px;
+  color: #8591a2;
+  text-align: center;
+  background: rgba(246, 247, 249, 0.5);
+  content: attr(data-slot);
+  outline: 1px dashed #dedede;
+  outline-offset: -1px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.list-group-item {
+  position: relative;
+  padding: 3px;
+  cursor: move;
+
+  &.focusWithChild {
+    @include showContainerBorder;
   }
 
-  .inner-draggable.slot::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    height: auto;
-    min-height: 40px;
-    font-size: 12px;
-    color: #8591a2;
-    text-align: center;
-    background: rgba(246, 247, 249, 0.5);
-    content: attr(data-slot);
-    outline: 1px dashed #dedede;
-    outline-offset: -1px;
-    flex-direction: column;
-    justify-content: center;
-  }
+  &.focus {
+    @include showSoliOutline;
 
-  .list-group-item {
-    position: relative;
-    padding: 3px;
-    cursor: move;
+    &::after {
+      @include showCompLabel(top);
 
-    &.focusWithChild {
-      @include showContainerBorder;
+      opacity: 0;
+      transition: opacity 0.2s;
     }
 
-    &.focus {
-      @include showSoliOutline;
-
-      &::after {
-        @include showCompLabel(top);
-
-        opacity: 0;
-        transition: opacity 0.2s;
-      }
-
-      &:hover::after {
-        opacity: 1;
-      }
+    &:hover::after {
+      opacity: 1;
     }
   }
+}
 </style>

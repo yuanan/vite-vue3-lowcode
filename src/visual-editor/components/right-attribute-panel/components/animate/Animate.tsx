@@ -1,8 +1,8 @@
 /*
- * @Author: 卜启缘
+ * @Author: xxx
  * @Date: 2021-06-11 18:08:01
  * @LastEditTime: 2021-07-07 21:53:06
- * @LastEditors: 卜启缘
+ * @LastEditors: xxx
  * @Description: 动画组件
  * @FilePath: \vite-vue3-lowcode\src\visual-editor\components\right-attribute-panel\components\animate\Animate.tsx
  */

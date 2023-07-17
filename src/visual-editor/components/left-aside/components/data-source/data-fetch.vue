@@ -1,8 +1,8 @@
 <!--
- * @Author: 卜启缘
+ * @Author: xxx
  * @Date: 2021-06-24 18:36:03
  * @LastEditTime: 2021-07-09 20:00:22
- * @LastEditors: 卜启缘
+ * @LastEditors: xxx
  * @Description: 接口请求
  * @FilePath: \vite-vue3-lowcode\src\visual-editor\components\left-aside\components\data-source\data-fetch.vue
 -->
@@ -16,7 +16,7 @@
       </template>
     </el-popconfirm>
   </div>
-  <el-collapse v-model="state.activeNames" v-infinite-scroll="() => {}">
+  <el-collapse v-model="state.activeNames" v-infinite-scroll="() => { }">
     <template v-for="item in apis" :key="item.key">
       <el-collapse-item :title="item.name" :name="item.key">
         <template #title>
@@ -26,15 +26,12 @@
               <ElIcon :size="24" color="#2196f3" @click.stop="editApiItem(item)">
                 <Edit />
               </ElIcon>
-              <el-popconfirm
-                confirm-button-text="确定"
-                cancel-button-text="取消"
-                icon-color="red"
-                title="确定要删除该接口吗？"
-                @confirm="deleteFetchApi(item.key)"
-              >
+              <el-popconfirm confirm-button-text="确定" cancel-button-text="取消" icon-color="red" title="确定要删除该接口吗？"
+                @confirm="deleteFetchApi(item.key)">
                 <template #reference>
-                  <ElIcon :size="24" color="#f44336"><Delete /></ElIcon>
+                  <ElIcon :size="24" color="#f44336">
+                    <Delete />
+                  </ElIcon>
                 </template>
               </el-popconfirm>
             </div>
@@ -230,39 +227,39 @@
 </script>
 
 <style lang="scss" scoped>
-  .low-model-item {
-    overflow: auto;
+.low-model-item {
+  overflow: auto;
 
-    .code {
-      padding: 4px 10px;
-      font-size: 12px;
-      line-height: 1.4;
-    }
+  .code {
+    padding: 4px 10px;
+    font-size: 12px;
+    line-height: 1.4;
   }
+}
 
-  .model-item-title {
-    flex: 1;
+.model-item-title {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .model-actions {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
 
-    .model-actions {
-      display: flex;
+    i {
+      padding: 6px;
+      margin: 0 2px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 2px;
+      opacity: 0.7;
+      transition: all 0.1s;
 
-      i {
-        padding: 6px;
-        margin: 0 2px;
-        font-weight: bold;
-        cursor: pointer;
-        border-radius: 2px;
-        opacity: 0.7;
-        transition: all 0.1s;
-
-        &:hover {
-          background-color: #f1f1f1;
-          opacity: 1;
-        }
+      &:hover {
+        background-color: #f1f1f1;
+        opacity: 1;
       }
     }
   }
+}
 </style>

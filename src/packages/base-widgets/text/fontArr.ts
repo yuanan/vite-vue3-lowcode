@@ -1,8 +1,8 @@
 /*
- * @Author: 卜启缘
+ * @Author: xxx
  * @Date: 2021-06-14 00:53:21
  * @LastEditTime: 2021-06-14 00:55:55
- * @LastEditors: 卜启缘
+ * @LastEditors: xxx
  * @Description: 可用字体集
  * @FilePath: \vite-vue3-lowcode\src\packages\base-widgets\text\fontArr.ts
  */

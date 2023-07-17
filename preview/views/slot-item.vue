@@ -1,8 +1,8 @@
 <!--
- * @Author: 卜启缘
+ * @Author: xxx
  * @Date: 2021-06-12 22:18:48
  * @LastEditTime: 2021-07-14 10:17:34
- * @LastEditors: 卜启缘
+ * @LastEditors: xxx
  * @Description:
  * @FilePath: \vite-vue3-lowcode\preview\views\slot-item.vue
 -->

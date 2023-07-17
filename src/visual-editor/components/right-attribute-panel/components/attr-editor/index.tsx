@@ -1,8 +1,8 @@
 /*
- * @Author: 卜启缘
+ * @Author: xxx
  * @Date: 2021-06-10 16:23:06
  * @LastEditTime: 2021-07-11 18:36:24
- * @LastEditors: 卜启缘
+ * @LastEditors: xxx
  * @Description: 组件属性编辑器
  * @FilePath: \vite-vue3-lowcode\src\visual-editor\components\right-attribute-panel\components\attr-editor\index.tsx
  */
